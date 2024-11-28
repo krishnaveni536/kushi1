@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tea Park - Menu</title>
+    <style>
+        /* Basic Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Full Page Background Image */
+        body {
+            font-family: 'Arial', sans-serif;
+            background-image: url('https://example.com/tea-park-background.jpg'); /* Replace with your background image URL */
+            background-size: cover;
+            background-position: center;
+            color: white;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Overlay for better text contrast */
+        .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5); /* Semi-transparent overlay */
+        }
+
+        /* Container for content */
+        .content {
+            position: relative;
+            z-index: 1;
+            max-width: 800px;
+            padding: 20px;
+            background-color: rgba(0, 0, 0, 0.6); /* Slightly transparent background */
+            border-radius: 10px;
+        }
+
+        /* Title Style */
+        h1 {
+            font-size: 3em;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+
+        /* Paragraph Style */
+        p {
+            font-size: 1.2em;
+            margin-bottom: 20px;
+        }
+
+        /* Button Style */
+        .btn {
+            padding: 10px 20px;
+            font-size: 1.1em;
+            background-color: #4CAF50; /* Green button */
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-decoration: none;
+        }
+
+        .btn:hover {
+            background-color: #45a049;
+        }
+
+        /* Menu Section */
+        .menu {
+            display: none; /* Initially hidden */
+            text-align: left;
+            margin-top: 20px;
+        }
+
+        .menu h2 {
+            font-size: 2em;
+            margin-bottom: 10px;
+        }
+
+        .menu .category {
+            margin-bottom: 20px;
+        }
+
+        .category img {
+            width: 100%;
+            max-width: 200px;
+            margin-bottom: 10px;
+            border-radius: 10px;
+        }
+
+        .category h3 {
+            font-size: 1.5em;
+            margin-bottom: 10px;
+        }
+
+        .category p {
+            font-size: 1.1em;
+            color: #ddd;
+        }
+    </style>
+    <script>
+        function showMenu() {
+            document.getElementById("menu").style.display = "block";
+            document.getElementById("explore-btn").style.display = "none"; // Hide the button after clicking
+        }
+    </script>
+</head>
+<body>
+    <!-- Overlay to darken the background for better visibility -->
+    <div class="overlay"></div>
+
+    <!-- Main Content -->
+    <div class="content">
+        <h1>Welcome to the Tea Park</h1>
+        <p>Discover the serenity of tea gardens and the rich aroma of freshly brewed tea. Relax, unwind, and enjoy nature's beauty.</p>
+        <button id="explore-btn" class="btn" onclick="showMenu()">Explore Now</button>
+
+        <!-- Menu Section -->
+        <div id="menu" class="menu">
+            <h2>Menu</h2>
+
+            <!-- Tea Varieties -->
+            <div class="category">
+                <h3>Tea Varieties</h3>
+                <img src="https://th.bing.com/th/id/OIP.yxfGy06ZPSORtSsGJ58y0QHaE7?w=230&h=180&c=7&r=0&o=5&pid=1.7" alt="Black Tea">
+                <p>Black Tea: Bold and robust, perfect for morning energy.</p>
+                <img src="https://th.bing.com/th/id/OIP.yAnBlInK39gcaA_y8pcItAHaHa?w=183&h=183&c=7&r=0&o=5&pid=1.7" alt="Herbal Tea">
+                <p>Herbal Tea: A blend of herbs for relaxation and calm.</p>
+            </div>
+
+            <!-- Coffee Varieties -->
+            <div class="category">
+                <h3>Coffee Varieties</h3>
+                <img src="https://th.bing.com/th/id/OIP.x1vJJny0erg4CvicFQws4AHaEo?w=283&h=180&c=7&r=0&o=5&pid=1.7" alt="Latte">
+                <p>Latte: Smooth and creamy with a strong espresso base.</p>
+                <img src="https://th.bing.com/th/id/OIP.iuXuV3I1W9x3H6EVzOa8XwHaHa?w=189&h=189&c=7&r=0&o=5&pid=1.7" alt="Espresso">
+                <p>Espresso: A shot of pure coffee for an intense experience.</p>
+                <img src="https://th.bing.com/th/id/OIP.lS3cjvQKsm377WWc1rvleQHaHa?w=182&h=182&c=7&r=0&o=5&pid=1.7" alt="Cappuccino">
+                <p>Cappuccino: A perfect balance of espresso, steamed milk, and foam.</p>
+            </div>
+
+            <!-- Starters -->
+            <div class="category">
+                <h3>Starters</h3>
+                <img src="https://th.bing.com/th/id/OIP.6wkzj1_TuVQKw3uPusvJ_AHaE5?w=277&h=183&c=7&r=0&o=5&pid=1.7" alt="Samosa">
+                <p>Samosa: A crispy snack filled with spiced potatoes.</p>
+                <img src="https://th.bing.com/th/id/OIP.0ypBQLovpZutmN7kfdQgdwHaEc?w=274&h=180&c=7&r=0&o=5&pid=1.7" alt="Pringles">
+                <p>Pringles: Light, crunchy, and perfect with your tea or coffee.</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
